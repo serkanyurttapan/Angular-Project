@@ -1,0 +1,17 @@
+<ul>
+<!-- <li>Serkan</li>
+<li>Salih</li>
+<li>Serkan2</li>
+<li>Serkan23</li>
+<li>Serkan5</li> -->
+<li *ngFor="let cust of customers" (click)="selectCustomer(cust)">
+    {{cust.age}}
+</li>
+
+    
+</ul>
+<strong *ngIf="selectedCustomer; else elseBlock"> {{selectedCustomer.id}} Seçtiniz
+<ng-template #elseBlock>
+Birşey Seçmediniz.
+</ng-template>
+</strong>
